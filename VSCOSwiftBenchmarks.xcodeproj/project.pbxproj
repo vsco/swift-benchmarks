@@ -13,7 +13,12 @@
 		4B78815D1A6F11DD00DA59F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B78815B1A6F11DD00DA59F2 /* Main.storyboard */; };
 		4B78815F1A6F11DD00DA59F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B78815E1A6F11DD00DA59F2 /* Images.xcassets */; };
 		4B7881621A6F11DD00DA59F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7881601A6F11DD00DA59F2 /* LaunchScreen.xib */; };
-		4B78816E1A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B78816D1A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests.m */; };
+		4B78816E1A6F11DD00DA59F2 /* VSCOObjectiveCBenchmarksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B78816D1A6F11DD00DA59F2 /* VSCOObjectiveCBenchmarksTests.m */; };
+		4B7881791A6F11FA00DA59F2 /* ObjectiveCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7881781A6F11FA00DA59F2 /* ObjectiveCUtils.m */; };
+		4B78817A1A6F11FA00DA59F2 /* ObjectiveCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7881781A6F11FA00DA59F2 /* ObjectiveCUtils.m */; };
+		4B78817E1A6F122A00DA59F2 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78817D1A6F122A00DA59F2 /* SwiftUtils.swift */; };
+		4B78817F1A6F122A00DA59F2 /* SwiftUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B78817D1A6F122A00DA59F2 /* SwiftUtils.swift */; };
+		4B7881811A6F132100DA59F2 /* VSCOSwiftBenchmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7881801A6F132100DA59F2 /* VSCOSwiftBenchmarksTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,12 @@
 		4B7881611A6F11DD00DA59F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4B7881671A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VSCOSwiftBenchmarksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B78816C1A6F11DD00DA59F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B78816D1A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSCOSwiftBenchmarksTests.m; sourceTree = "<group>"; };
+		4B78816D1A6F11DD00DA59F2 /* VSCOObjectiveCBenchmarksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSCOObjectiveCBenchmarksTests.m; sourceTree = "<group>"; };
+		4B7881771A6F11FA00DA59F2 /* ObjectiveCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCUtils.h; sourceTree = "<group>"; };
+		4B7881781A6F11FA00DA59F2 /* ObjectiveCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCUtils.m; sourceTree = "<group>"; };
+		4B78817B1A6F122900DA59F2 /* VSCOSwiftBenchmarks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VSCOSwiftBenchmarks-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B78817D1A6F122A00DA59F2 /* SwiftUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUtils.swift; sourceTree = "<group>"; };
+		4B7881801A6F132100DA59F2 /* VSCOSwiftBenchmarksTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSCOSwiftBenchmarksTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +95,14 @@
 				4B7881561A6F11DD00DA59F2 /* AppDelegate.m */,
 				4B7881581A6F11DD00DA59F2 /* ViewController.h */,
 				4B7881591A6F11DD00DA59F2 /* ViewController.m */,
+				4B7881771A6F11FA00DA59F2 /* ObjectiveCUtils.h */,
+				4B7881781A6F11FA00DA59F2 /* ObjectiveCUtils.m */,
+				4B78817D1A6F122A00DA59F2 /* SwiftUtils.swift */,
 				4B78815B1A6F11DD00DA59F2 /* Main.storyboard */,
 				4B78815E1A6F11DD00DA59F2 /* Images.xcassets */,
 				4B7881601A6F11DD00DA59F2 /* LaunchScreen.xib */,
 				4B7881511A6F11DD00DA59F2 /* Supporting Files */,
+				4B78817B1A6F122900DA59F2 /* VSCOSwiftBenchmarks-Bridging-Header.h */,
 			);
 			path = VSCOSwiftBenchmarks;
 			sourceTree = "<group>";
@@ -105,7 +119,8 @@
 		4B78816A1A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests */ = {
 			isa = PBXGroup;
 			children = (
-				4B78816D1A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests.m */,
+				4B78816D1A6F11DD00DA59F2 /* VSCOObjectiveCBenchmarksTests.m */,
+				4B7881801A6F132100DA59F2 /* VSCOSwiftBenchmarksTests.swift */,
 				4B78816B1A6F11DD00DA59F2 /* Supporting Files */,
 			);
 			path = VSCOSwiftBenchmarksTests;
@@ -222,6 +237,8 @@
 				4B78815A1A6F11DD00DA59F2 /* ViewController.m in Sources */,
 				4B7881571A6F11DD00DA59F2 /* AppDelegate.m in Sources */,
 				4B7881541A6F11DD00DA59F2 /* main.m in Sources */,
+				4B7881791A6F11FA00DA59F2 /* ObjectiveCUtils.m in Sources */,
+				4B78817E1A6F122A00DA59F2 /* SwiftUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B78816E1A6F11DD00DA59F2 /* VSCOSwiftBenchmarksTests.m in Sources */,
+				4B78816E1A6F11DD00DA59F2 /* VSCOObjectiveCBenchmarksTests.m in Sources */,
+				4B78817A1A6F11FA00DA59F2 /* ObjectiveCUtils.m in Sources */,
+				4B7881811A6F132100DA59F2 /* VSCOSwiftBenchmarksTests.swift in Sources */,
+				4B78817F1A6F122A00DA59F2 /* SwiftUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +365,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VSCOSwiftBenchmarks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VSCOSwiftBenchmarks/VSCOSwiftBenchmarks-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -355,9 +378,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VSCOSwiftBenchmarks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VSCOSwiftBenchmarks/VSCOSwiftBenchmarks-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -365,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -376,6 +402,8 @@
 				INFOPLIST_FILE = VSCOSwiftBenchmarksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VSCOSwiftBenchmarks/VSCOSwiftBenchmarks-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VSCOSwiftBenchmarks.app/VSCOSwiftBenchmarks";
 			};
 			name = Debug;
@@ -384,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -391,6 +420,7 @@
 				INFOPLIST_FILE = VSCOSwiftBenchmarksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VSCOSwiftBenchmarks/VSCOSwiftBenchmarks-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VSCOSwiftBenchmarks.app/VSCOSwiftBenchmarks";
 			};
 			name = Release;
