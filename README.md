@@ -1,3 +1,4 @@
+```objective-c
 NSMutableArray Unit Test
 
 // Default Objective-C Implementation
@@ -12,7 +13,9 @@ NSMutableArray Unit Test
         array[randomIndex] = currentObject;
     }
 }
+```
 
+```swift
 // Default Swift Implementation
 @objc class func shuffleObjects(array: NSMutableArray) {
         for (var i = 0; i < array.count; i++) {
@@ -24,7 +27,7 @@ NSMutableArray Unit Test
             array[randomIndex] = currentObject
         }
 }
-
+```
 
 
 Shuffle 100,000 NSNumber objects in NSMutableArray
