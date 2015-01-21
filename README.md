@@ -3,9 +3,9 @@
 **Shuffle 100,000 NSNumber objects in NSMutableArray**
 -O
 
-| ObjectiveCUtils        | SwiftUtils           |
-| -----------------------|:--------------------:|
-| 0.016135               | 0.022997             |
+| ObjectiveCUtils| SwiftUtils|
+|---|---|
+| 0.016135 s| 0.022997s|
 
 
 **Shuffle 1,000,000 NSNumber objects in NSMutableArray**
