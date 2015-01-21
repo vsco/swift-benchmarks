@@ -17,7 +17,7 @@ Shuffle 1,000,000 Int objects in [Int] with Swift Project default implementation
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.370280981063843 seconds| 0.0822709798812866 seconds|
+| 0.370280 seconds| 0.0822709 seconds|
 
 Empty loop 1,000,000 objects with NSMutableArray
 
