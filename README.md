@@ -8,26 +8,19 @@ Shuffle 100,000 NSNumber objects in NSMutableArray
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.016135 seconds| 0.022997 seconds|
-
+| 0.012 seconds 9% STDEV| 0.023 seconds 6% STDEV|
 
 Shuffle 1,000,000 NSNumber objects in NSMutableArray
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.193394 seconds| 0.263660 seconds|
-
-Shuffle 1,000,000 Int objects in [Int] with Swift Project default implementation of Int and use Swift View Controller as caller
-
-| ObjectiveCUtils| SwiftUtils|
-|---|---|
-| 0.370280 seconds| 0.0822709 seconds|
+| 0.197 seconds 3% STDEV| 0.289 seconds 5% STDEV|
 
 Empty loop 1,000,000 objects with NSMutableArray
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.004 seconds| 0.003 seconds|
+| 0.003 seconds 9% STDEV| 0.004 seconds 11% STDEV|
 
 Empty implementation no parameters
 
