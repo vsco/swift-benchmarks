@@ -40,31 +40,31 @@ Shuffle 1,000,000 Int objects in [AnyObject] with default implementation
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.298 with conversion to NSMutableArray | 0.417 seconds|
+| 0.306 seconds 3% STDEV | 0.475 seconds 5% STDEV|
 
 Shuffle 1,000,000 Int objects with default implementation passing [Int]
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| Same as above | 0.084 seconds|
+| Same as above | 0.081 seconds 4% STDEV|
 
 Shuffle 1,000,000 Int objects with default implementation passing [T]
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| Same as above | 10.498 seconds|
+| Same as above | 13.256 seconds 11% STDEV|
 
 Shuffle 1,000,000 String objects with default implementation passing [String]
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 1.193 with conversion to NSMutableArray | 0.361 seconds|
+| 1.130 seconds 6% STDEV | 0.321 seconds 2% STDEV|
 
 Empty loop 1,000,000 String objects in [Int]
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.115 with conversion to NSMutableArray | 0.001 seconds|
+| 0.111 seconds 3% STDEV | 0.001 seconds 5% STDEV|
 
 Empty implementation no parameters
 
