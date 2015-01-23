@@ -1,3 +1,5 @@
+Swift unit tests compiled at Fastest[-O] Optimization Level
+
 ###NSMutableArray Unit Test
 
 Shuffle 100,000 NSNumber objects in NSMutableArray
