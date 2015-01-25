@@ -10,41 +10,40 @@ import UIKit
 import XCTest
 
 class VSCOSwiftBenchmarksTests: XCTestCase {
-    var objects:[Int]!
     
-    override func setUp() {
-        super.setUp()
-        
-        objects = [Int]()
-        
+    class func createNSMutableArray<T: AnyObject>(objectFunc: Int -> T) -> NSMutableArray {
+        let mutableArrayObjects = NSMutableArray()
         for (var i = 0; i < 1000000; i++) {
-            objects.append(i)
+            mutableArrayObjects.addObject(objectFunc(i))
         }
+        
+        return mutableArrayObjects
     }
     
-    override func tearDown() {
-        objects = nil
+    class func createSwiftArray<T>(objectFunc: Int -> T) -> [T] {
+        var objects = [T]()
+        for (var i = 0; i < 1000000; i++) {
+            objects.append(objectFunc(i))
+        }
         
-        super.tearDown()
+        return objects
     }
     
     // MARK: Base Case: Shuffle 1,000,000 Int objects in [AnyObject] array
     
     func testShuffleAnyObjectObjC() {
-        let mutableArrayObjects = NSMutableArray()
-        for (var i = 0; i < 1000000; i++) {
-            mutableArrayObjects.addObject(i)
+        let mutableArrayObjects = self.dynamicType.createNSMutableArray() { index -> NSNumber in
+            return NSNumber(integer: index)
         }
         
-        self.measureBlock() { [weak self] in
+        self.measureBlock() {
             ObjectiveCUtils.shuffleObjects(mutableArrayObjects)
         }
     }
     
     func testShuffleAnyObjectSwift() {
-        var anyObjects = [AnyObject]()
-        for (var i = 0; i < 1000000; i++) {
-            anyObjects.append(i)
+        var anyObjects = self.dynamicType.createSwiftArray() { index -> AnyObject in
+            return index
         }
         
         self.measureBlock() {
@@ -59,9 +58,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleAnySwift() {
-        var anyObjects = [Any]()
-        for (var i = 0; i < 1000000; i++) {
-            anyObjects.append(i)
+        var anyObjects = self.dynamicType.createSwiftArray() { index -> Any in
+            return index
         }
         
         self.measureBlock() {
@@ -76,8 +74,12 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleIntSwift() {
-        self.measureBlock() { [weak self] in
-            SwiftUtils.shuffleIntObjects(&self!.objects!)
+        var objects = self.dynamicType.createSwiftArray() { index -> Int in
+            return index
+        }
+        
+        self.measureBlock() {
+            SwiftUtils.shuffleIntObjects(&objects)
         }
     }
     
@@ -88,17 +90,20 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleGenericSwift() {
-        self.measureBlock() { [weak self] in
-            SwiftUtils.shuffleGenericObjects(&self!.objects!)
+        var objects = self.dynamicType.createSwiftArray() { index -> Int in
+            return index
+        }
+        
+        self.measureBlock() {
+            SwiftUtils.shuffleGenericObjects(&objects)
         }
     }
     
     // MARK: Shuffle 1,000,000 String objects in [String] array
     
     func testShuffleStringObjC() {
-        let mutableArrayObjects = NSMutableArray()
-        for (var i = 0; i < 1000000; i++) {
-            mutableArrayObjects.addObject("i")
+        let mutableArrayObjects = self.dynamicType.createNSMutableArray() { index -> NSString in
+            return NSString(string: "\(index)")
         }
         
         self.measureBlock() {
@@ -107,9 +112,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleStringSwift() {
-        var stringObjects = [String]()
-        for (var i = 0; i < 1000000; i++) {
-            stringObjects.append("\(i)")
+        var stringObjects = self.dynamicType.createSwiftArray() { index -> String in
+            return "\(index)"
         }
         
         self.measureBlock() {
@@ -120,9 +124,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     // MARK: Shuffle 1,000,000 ObjcObject objects in [ObjcObject] array
     
     func testShuffleObjcObjectObjC() {
-        let mutableArrayObjects = NSMutableArray()
-        for (var i = 0; i < 1000000; i++) {
-            mutableArrayObjects.addObject(ObjcObject())
+        let mutableArrayObjects = self.dynamicType.createNSMutableArray() { index -> ObjcObject in
+            return ObjcObject()
         }
         
         self.measureBlock() {
@@ -131,9 +134,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleObjcObjectSwift() {
-        var objcObjects = [ObjcObject]()
-        for (var i = 0; i < 1000000; i++) {
-            objcObjects.append(ObjcObject())
+        var objcObjects = self.dynamicType.createSwiftArray() { index -> ObjcObject in
+            return ObjcObject()
         }
         
         self.measureBlock() {
@@ -144,9 +146,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     // MARK: Shuffle 1,000,000 SwiftObject objects in [SwiftObject] array
     
     func testShuffleSwiftObjectObjC() {
-        let mutableArrayObjects = NSMutableArray()
-        for (var i = 0; i < 1000000; i++) {
-            mutableArrayObjects.addObject(SwiftObject())
+        let mutableArrayObjects = self.dynamicType.createNSMutableArray() { index -> SwiftObject in
+            return SwiftObject()
         }
         
         self.measureBlock() {
@@ -155,9 +156,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleSwiftObjectSwift() {
-        var swiftObjects = [SwiftObject]()
-        for (var i = 0; i < 1000000; i++) {
-            swiftObjects.append(SwiftObject())
+        var swiftObjects = self.dynamicType.createSwiftArray() { index -> SwiftObject in
+            return SwiftObject()
         }
         
         self.measureBlock() {
@@ -172,9 +172,8 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testShuffleSwiftStructObjectSwift() {
-        var swiftObjects = [SwiftStructObject]()
-        for (var i = 0; i < 1000000; i++) {
-            swiftObjects.append(SwiftStructObject())
+        var swiftObjects = self.dynamicType.createSwiftArray() { index -> SwiftStructObject in
+            return SwiftStructObject()
         }
         
         self.measureBlock() {
@@ -184,19 +183,22 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     
     // MARK: Iterate 1,000,000 objects with [Int] array
     func testIterateObjectsObjC() {
-        let mutableArrayObjects = NSMutableArray()
-        for (var i = 0; i < 1000000; i++) {
-            mutableArrayObjects.addObject(i)
+        let mutableArrayObjects = self.dynamicType.createNSMutableArray() { index -> NSNumber in
+            return NSNumber(integer: index)
         }
         
-        self.measureBlock() { [weak self] in
+        self.measureBlock() {
             ObjectiveCUtils.iterateEmptyLoop(mutableArrayObjects)
         }
     }
     
     func testIterateObjectsSwift() {
-        self.measureBlock() { [weak self] in
-            SwiftUtils.iterateEmptyLoopForSwiftArray(self!.objects!)
+        var intObjects = self.dynamicType.createSwiftArray() { index -> Int in
+            return index
+        }
+        
+        self.measureBlock() {
+            SwiftUtils.iterateEmptyLoopForSwiftArray(intObjects)
         }
     }
     
