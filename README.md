@@ -6,37 +6,37 @@
 
 Shuffle 100,000 NSNumber objects in NSMutableArray
 
-| ObjectiveCUtils| SwiftUtils|
+| ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.012 seconds 9% STDEV| 0.023 seconds 6% STDEV|
 
 Shuffle 1,000,000 NSNumber objects in NSMutableArray
 
-| ObjectiveCUtils| SwiftUtils|
+| ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.197 seconds 3% STDEV| 0.289 seconds 5% STDEV|
 
 Shuffle 1,000,000 NSString objects in NSMutableArray
 
-| ObjectiveCUtils| SwiftUtils|
+| ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.440 seconds 2% STDEV| 0.499 seconds 2% STDEV|
 
 Empty loop 1,000,000 objects with NSMutableArray
 
-| ObjectiveCUtils| SwiftUtils|
+| ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.003 seconds 9% STDEV| 0.004 seconds 11% STDEV|
 
 Empty implementation no parameters
 
-| ObjectiveCUtils| SwiftUtils|
+| ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.000013 seconds| 0.000007 seconds|
 
 Console log implementation no parameters
 
-| ObjectiveCUtils| SwiftUtils|
+| ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.000689 seconds| 0.000143 seconds|
 
