@@ -102,7 +102,7 @@ Empty loop 1,000,000 String objects in [Int]
 
 | ObjectiveCUtils| SwiftUtils|
 |---|---|
-| 0.111 seconds 3% STDEV | 0.001 seconds 5% STDEV|
+| 0.004 seconds 12% STDEV | 0.001 seconds 5% STDEV|
 
 Empty implementation no parameters
 
