@@ -14,41 +14,58 @@
 
 @interface VSCOObjectiveCBenchmarksTests : XCTestCase
 
-@property (nonatomic, strong) NSMutableArray *objects;
 
 @end
 
 @implementation VSCOObjectiveCBenchmarksTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-    self.objects = [NSMutableArray new];
++ (NSMutableArray *)createNSNumberArray
+{
+    NSMutableArray *array = [NSMutableArray new];
     for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:@(i)];
+        [array addObject:@(i)];
     }
+    
+    return array;
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    self.objects = nil;
++ (NSMutableArray *)createNSStringArray
+{
+    NSMutableArray *array = [NSMutableArray new];
+    for (NSUInteger i = 0; i < 1000000; i++) {
+        [array addObject:[NSString stringWithFormat:@"%lu", (unsigned long)i]];
+    }
     
-    [super tearDown];
+    return array;
+}
+
++ (NSMutableArray *)createArrayWithObjectClass:(Class)objectClass
+{
+    NSMutableArray *array = [NSMutableArray new];
+    for (NSUInteger i = 0; i < 1000000; i++) {
+        [array addObject:[objectClass new]];
+    }
+    
+    return array;
 }
 
 #pragma mark - Base Case: Shuffle 1,000,000 NSNumber objects in NSMutableArray
 
 - (void)testShuffleNumberObjC
 {
+    NSMutableArray *objects = [[self class] createNSNumberArray];
+
     [self measureBlock:^{
-        [ObjectiveCUtils shuffleObjects:self.objects];
+        [ObjectiveCUtils shuffleObjects:objects];
     }];
 }
 
 - (void)testShuffleNumberSwift
 {
+    NSMutableArray *objects = [[self class] createNSNumberArray];
+    
     [self measureBlock:^{
-        [SwiftUtils shuffleObjects:self.objects];
+        [SwiftUtils shuffleObjects:objects];
     }];
 }
 
@@ -56,25 +73,19 @@
 
 - (void)testShuffleStringObjC
 {
-    self.objects = [NSMutableArray new];
-    for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:[NSString stringWithFormat:@"%lu", (unsigned long)i]];
-    }
+    NSMutableArray *objects = [[self class] createNSStringArray];
     
     [self measureBlock:^{
-        [ObjectiveCUtils shuffleObjects:self.objects];
+        [ObjectiveCUtils shuffleObjects:objects];
     }];
 }
 
 - (void)testShuffleStringSwift
 {
-    self.objects = [NSMutableArray new];
-    for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:[NSString stringWithFormat:@"%lu", (unsigned long)i]];
-    }
+    NSMutableArray *objects = [[self class] createNSStringArray];
     
     [self measureBlock:^{
-        [SwiftUtils shuffleObjects:self.objects];
+        [SwiftUtils shuffleObjects:objects];
     }];
 }
 
@@ -82,25 +93,19 @@
 
 - (void)testShuffleObjcObjectsObjC
 {
-    self.objects = [NSMutableArray new];
-    for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:[ObjcObject new]];
-    }
+    NSMutableArray *objects = [[self class] createArrayWithObjectClass:[ObjcObject class]];
     
     [self measureBlock:^{
-        [ObjectiveCUtils shuffleObjects:self.objects];
+        [ObjectiveCUtils shuffleObjects:objects];
     }];
 }
 
 - (void)testShuffleObjcObjectsSwift
 {
-    self.objects = [NSMutableArray new];
-    for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:[ObjcObject new]];
-    }
+    NSMutableArray *objects = [[self class] createArrayWithObjectClass:[ObjcObject class]];
     
     [self measureBlock:^{
-        [SwiftUtils shuffleObjects:self.objects];
+        [SwiftUtils shuffleObjects:objects];
     }];
 }
 
@@ -108,25 +113,19 @@
 
 - (void)testShuffleSwiftObjectsObjC
 {
-    self.objects = [NSMutableArray new];
-    for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:[SwiftObject new]];
-    }
+    NSMutableArray *objects = [[self class] createArrayWithObjectClass:[SwiftObject class]];
     
     [self measureBlock:^{
-        [ObjectiveCUtils shuffleObjects:self.objects];
+        [ObjectiveCUtils shuffleObjects:objects];
     }];
 }
 
 - (void)testShuffleSwiftObjectsSwift
 {
-    self.objects = [NSMutableArray new];
-    for (NSUInteger i = 0; i < 1000000; i++) {
-        [self.objects addObject:[SwiftObject new]];
-    }
+    NSMutableArray *objects = [[self class] createArrayWithObjectClass:[SwiftObject class]];
     
     [self measureBlock:^{
-        [SwiftUtils shuffleObjects:self.objects];
+        [SwiftUtils shuffleObjects:objects];
     }];
 }
 
@@ -134,15 +133,19 @@
 
 - (void)testIterateObjectsObjC
 {
+    NSMutableArray *objects = [[self class] createNSNumberArray];
+    
     [self measureBlock:^{
-        [ObjectiveCUtils iterateEmptyLoop:self.objects];
+        [ObjectiveCUtils iterateEmptyLoop:objects];
     }];
 }
 
 - (void)testIterateObjectsSwift
 {
+    NSMutableArray *objects = [[self class] createNSNumberArray];
+    
     [self measureBlock:^{
-        [SwiftUtils iterateEmptyLoop:self.objects];
+        [SwiftUtils iterateEmptyLoop:objects];
     }];
 }
 
