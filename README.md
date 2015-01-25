@@ -92,6 +92,12 @@ Shuffle 1,000,000 SwiftObject objects with Swift implementation taking [SwiftObj
 |---|---|
 | 0.577 seconds 1% STDEV | 0.950 seconds 2% STDEV|
 
+Shuffle 1,000,000 SwiftStructObject objects with Swift implementation taking [SwiftStructObject]
+
+| ObjectiveCUtils| SwiftUtils|
+|---|---|
+| N/A | 0.029 seconds 5% STDEV|
+
 Empty loop 1,000,000 String objects in [Int]
 
 | ObjectiveCUtils| SwiftUtils|
