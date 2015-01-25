@@ -17,13 +17,13 @@
 |Empty implementation no parameters| 0.000013 seconds| 0.000007 seconds|-|
 |Console log implementation no parameters| 0.000689 seconds| 0.000143 seconds|-|
 |**Swift Unit Test**|
-|Shuffle 1,000,000 Int objects with Swift implementation taking [AnyObject]| 0.202 seconds 3% STDEV |-| 0.452 seconds 2% STDEV|
-|Shuffle 1,000,000 Int objects with Swift implementation taking [Any]| Same as above |-| 0.238 seconds 2% STDEV|
-|Shuffle 1,000,000 Int objects with Swift implementation taking [Int]| Same as above |-| 0.081 seconds 4% STDEV|
-|Shuffle 1,000,000 Int objects with Swift implementation taking [T]| Same as above |-| 13.256 seconds 11% STDEV|
-|Shuffle 1,000,000 String objects with Swift implementation taking [String]| 0.446 seconds 3% STDEV |-| 0.321 seconds 2% STDEV|
-|Shuffle 1,000,000 ObjcObject objects with Swift implementation taking [ObjcObject]| 0.584 seconds 2% STDEV |-| 0.983 seconds 2% STDEV|
-|Shuffle 1,000,000 SwiftObject objects with Swift implementation taking [SwiftObject]| 0.577 seconds 1% STDEV |-| 0.950 seconds 2% STDEV|
-|Shuffle 1,000,000 SwiftStructObject objects with Swift implementation taking [SwiftStructObject]|-|-| 0.029 seconds 5% STDEV|
+|Shuffle 1,000,000 Int objects with Swift implementation taking [AnyObject]| 0.122 seconds 2% STDEV |-| 0.452 seconds 2% STDEV|
+|Shuffle 1,000,000 Int objects with Swift implementation taking [Any]| Same as above |-| 0.220 seconds 3% STDEV|
+|Shuffle 1,000,000 Int objects with Swift implementation taking [Int]| Same as above |-| 0.064 seconds 3% STDEV|
+|Shuffle 1,000,000 Int objects with Swift implementation taking [T]| Same as above |-| 10.115 seconds 3% STDEV|
+|Shuffle 1,000,000 String objects with Swift implementation taking [String]| 0.385 seconds 3% STDEV |-| 0.302 seconds 1% STDEV|
+|Shuffle 1,000,000 ObjcObject objects with Swift implementation taking [ObjcObject]| 0.513 seconds 1% STDEV |-| 0.939 seconds 1% STDEV|
+|Shuffle 1,000,000 SwiftObject objects with Swift implementation taking [SwiftObject]| 0.512 seconds 1% STDEV |-| 0.949 seconds 1% STDEV|
+|Shuffle 1,000,000 SwiftStructObject objects with Swift implementation taking [SwiftStructObject]|-|-| 0.027 seconds 5% STDEV|
 |Empty loop 1,000,000 String objects in [Int]| 0.004 seconds 12% STDEV |-| 0.001 seconds 5% STDEV|
 |Empty implementation no parameters| 0.000 seconds |-| 0.000 seconds|
