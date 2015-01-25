@@ -167,8 +167,12 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     
     // MARK: Iterate 1,000,000 objects with [Int] array
     func testIterateObjectsObjC() {
+        let mutableArrayObjects = NSMutableArray()
+        for (var i = 0; i < 1000000; i++) {
+            mutableArrayObjects.addObject(i)
+        }
+        
         self.measureBlock() { [weak self] in
-            let mutableArrayObjects = NSMutableArray(array: self!.objects)
             ObjectiveCUtils.iterateEmptyLoop(mutableArrayObjects)
         }
     }
