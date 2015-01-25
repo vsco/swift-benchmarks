@@ -18,6 +18,7 @@
 |Console log implementation no parameters| 0.000689 seconds| 0.000143 seconds|-|
 |**Swift Unit Test**|
 |Shuffle 1,000,000 Int objects with Swift implementation taking [AnyObject]| 0.202 seconds 3% STDEV |-| 0.452 seconds 2% STDEV|
+|Shuffle 1,000,000 Int objects with Swift implementation taking [Any]| Same as above |-| 0.238 seconds 2% STDEV|
 |Shuffle 1,000,000 Int objects with Swift implementation taking [Int]| Same as above |-| 0.081 seconds 4% STDEV|
 |Shuffle 1,000,000 Int objects with Swift implementation taking [T]| Same as above |-| 13.256 seconds 11% STDEV|
 |Shuffle 1,000,000 String objects with Swift implementation taking [String]| 0.446 seconds 3% STDEV |-| 0.321 seconds 2% STDEV|
