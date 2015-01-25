@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "ObjectiveCUtils.h"
+#import "ObjcObject.h"
 #import "VSCOSwiftBenchmarksTests-Swift.h"
 
 @interface VSCOObjectiveCBenchmarksTests : XCTestCase
@@ -70,6 +71,32 @@
     self.objects = [NSMutableArray new];
     for (NSUInteger i = 0; i < 1000000; i++) {
         [self.objects addObject:[NSString stringWithFormat:@"%lu", (unsigned long)i]];
+    }
+    
+    [self measureBlock:^{
+        [SwiftUtils shuffleObjects:self.objects];
+    }];
+}
+
+#pragma mark - Shuffle 1,000,000 ObjcObject objects in NSMutableArray
+
+- (void)testShuffleObjcObjectsObjC
+{
+    self.objects = [NSMutableArray new];
+    for (NSUInteger i = 0; i < 1000000; i++) {
+        [self.objects addObject:[ObjcObject new]];
+    }
+    
+    [self measureBlock:^{
+        [ObjectiveCUtils shuffleObjects:self.objects];
+    }];
+}
+
+- (void)testShuffleObjcObjectsSwift
+{
+    self.objects = [NSMutableArray new];
+    for (NSUInteger i = 0; i < 1000000; i++) {
+        [self.objects addObject:[ObjcObject new]];
     }
     
     [self measureBlock:^{
