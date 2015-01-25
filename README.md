@@ -2,6 +2,8 @@
 
 *Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast*
 
+*All data was gathered running the iPhone 6 Simulator on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro*
+
 ###Objective-C Unit Test
 
 Shuffle 100,000 NSNumber objects in NSMutableArray
@@ -21,6 +23,12 @@ Shuffle 1,000,000 NSString objects in NSMutableArray
 | ObjectiveCUtils| @objc SwiftUtils|
 |---|---|
 | 0.440 seconds 2% STDEV| 0.499 seconds 2% STDEV|
+
+Shuffle 1,000,000 ObjcObject objects in NSMutableArray
+
+| ObjectiveCUtils| @objc SwiftUtils|
+|---|---|
+| 0.569 seconds 1% STDEV| 0.630 seconds 1% STDEV|
 
 Empty loop 1,000,000 objects with NSMutableArray
 
