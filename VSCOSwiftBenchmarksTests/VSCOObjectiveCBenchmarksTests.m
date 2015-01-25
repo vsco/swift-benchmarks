@@ -104,6 +104,32 @@
     }];
 }
 
+#pragma mark - Shuffle 1,000,000 SwiftObject objects in NSMutableArray
+
+- (void)testShuffleSwiftObjectsObjC
+{
+    self.objects = [NSMutableArray new];
+    for (NSUInteger i = 0; i < 1000000; i++) {
+        [self.objects addObject:[SwiftObject new]];
+    }
+    
+    [self measureBlock:^{
+        [ObjectiveCUtils shuffleObjects:self.objects];
+    }];
+}
+
+- (void)testShuffleSwiftObjectsSwift
+{
+    self.objects = [NSMutableArray new];
+    for (NSUInteger i = 0; i < 1000000; i++) {
+        [self.objects addObject:[SwiftObject new]];
+    }
+    
+    [self measureBlock:^{
+        [SwiftUtils shuffleObjects:self.objects];
+    }];
+}
+
 #pragma mark - Iterate 1,000,000 objects with NSMutableArray
 
 - (void)testIterateObjectsObjC
