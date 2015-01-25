@@ -16,6 +16,12 @@ Shuffle 1,000,000 NSNumber objects in NSMutableArray
 |---|---|
 | 0.197 seconds 3% STDEV| 0.289 seconds 5% STDEV|
 
+Shuffle 1,000,000 NSString objects in NSMutableArray
+
+| ObjectiveCUtils| SwiftUtils|
+|---|---|
+| 0.440 seconds 2% STDEV| 0.499 2% STDEV|
+
 Empty loop 1,000,000 objects with NSMutableArray
 
 | ObjectiveCUtils| SwiftUtils|
