@@ -32,6 +32,17 @@ class SwiftUtils: NSObject {
         }
     }
     
+    class func shuffleAny(inout array: [Any]) {
+        for (var i = 0; i < array.count; i++) {
+            let currentObject: Any = array[i]
+            let randomIndex = Int(arc4random()) % array.count
+            let randomObject: Any = array[randomIndex]
+            
+            array[i] = randomObject;
+            array[randomIndex] = currentObject
+        }
+    }
+    
     class func shuffleIntObjects(inout array: [Int]) {
         for (var i = 0; i < array.count; i++) {
             let currentObject: Int = array[i]

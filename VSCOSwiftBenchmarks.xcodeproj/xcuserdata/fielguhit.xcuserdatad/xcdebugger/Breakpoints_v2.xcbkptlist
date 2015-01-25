@@ -2,4 +2,52 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VSCOSwiftBenchmarksTests/VSCOSwiftBenchmarksTests.swift"
+            timestampString = "443907767.126529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "testShuffleAnyObjectSwift()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VSCOSwiftBenchmarksTests.VSCOSwiftBenchmarksTests.testShuffleAnyObjectSwift (VSCOSwiftBenchmarksTests.VSCOSwiftBenchmarksTests)() -&gt; ()"
+                  moduleName = "VSCOSwiftBenchmarksTests"
+                  urlString = "file:///Users/fielguhit/ios_workspace/VSCOSwiftBenchmarks/VSCOSwiftBenchmarksTests/VSCOSwiftBenchmarksTests.swift"
+                  timestampString = "443908218.404935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc VSCOSwiftBenchmarksTests.VSCOSwiftBenchmarksTests.testShuffleAnyObjectSwift (VSCOSwiftBenchmarksTests.VSCOSwiftBenchmarksTests)() -&gt; ()"
+                  moduleName = "VSCOSwiftBenchmarksTests"
+                  urlString = "file:///Users/fielguhit/ios_workspace/VSCOSwiftBenchmarks/VSCOSwiftBenchmarksTests/VSCOSwiftBenchmarksTests.swift"
+                  timestampString = "443908218.405121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "135">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

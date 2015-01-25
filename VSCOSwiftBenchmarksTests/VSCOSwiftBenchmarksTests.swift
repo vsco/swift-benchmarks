@@ -52,6 +52,23 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
         }
     }
     
+    // MARK: Shuffle 1,000,000 Int objects in [Any] array
+    
+    func testShuffleAnyObjC() {
+        // Same as testShuffleAnyObjectObjC
+    }
+    
+    func testShuffleAnySwift() {
+        var anyObjects = [Any]()
+        for (var i = 0; i < 1000000; i++) {
+            anyObjects.append(i)
+        }
+        
+        self.measureBlock() {
+            SwiftUtils.shuffleAny(&anyObjects)
+        }
+    }
+    
     // MARK: Shuffle 1,000,000 Int objects in [Int] array
     
     func testShuffleIntObjC() {
