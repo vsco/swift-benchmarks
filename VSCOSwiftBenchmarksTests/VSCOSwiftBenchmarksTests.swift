@@ -31,8 +31,12 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     // MARK: Base Case: Shuffle 1,000,000 Int objects in [AnyObject] array
     
     func testShuffleAnyObjectObjC() {
+        let mutableArrayObjects = NSMutableArray()
+        for (var i = 0; i < 1000000; i++) {
+            mutableArrayObjects.addObject(i)
+        }
+        
         self.measureBlock() { [weak self] in
-            let mutableArrayObjects = NSMutableArray(array: self!.objects)
             ObjectiveCUtils.shuffleObjects(mutableArrayObjects)
         }
     }
@@ -75,13 +79,12 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     // MARK: Shuffle 1,000,000 String objects in [String] array
     
     func testShuffleStringObjC() {
-        var stringObjects = [String]()
+        let mutableArrayObjects = NSMutableArray()
         for (var i = 0; i < 1000000; i++) {
-            stringObjects.append("\(i)")
+            mutableArrayObjects.addObject("i")
         }
         
         self.measureBlock() {
-            let mutableArrayObjects = NSMutableArray(array: stringObjects)
             ObjectiveCUtils.shuffleObjects(mutableArrayObjects)
         }
     }
