@@ -2,7 +2,7 @@
 
 *Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast*
 
-###NSMutableArray Unit Test
+###Objective-C Unit Test
 
 Shuffle 100,000 NSNumber objects in NSMutableArray
 
@@ -40,7 +40,7 @@ Console log implementation no parameters
 |---|---|
 | 0.000689 seconds| 0.000143 seconds|
 
-###Swift Array Unit Test
+###Swift Unit Test
 
 Shuffle 1,000,000 Int objects in [AnyObject] with default implementation
 
