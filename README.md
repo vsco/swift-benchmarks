@@ -2,7 +2,7 @@
 
 *Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast*
 
-*All tests were gathered on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro*
+*All data was gathered on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro*
 
 ###Objective-C Unit Test
 
