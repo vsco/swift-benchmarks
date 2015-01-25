@@ -100,6 +100,30 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
         }
     }
     
+    // MARK: Shuffle 1,000,000 ObjcObject objects in [ObjcObject] array
+    
+    func testShuffleObjcObjectObjC() {
+        let mutableArrayObjects = NSMutableArray()
+        for (var i = 0; i < 1000000; i++) {
+            mutableArrayObjects.addObject(ObjcObject())
+        }
+        
+        self.measureBlock() {
+            ObjectiveCUtils.shuffleObjects(mutableArrayObjects)
+        }
+    }
+    
+    func testShuffleObjcObjectSwift() {
+        var objcObjects = [ObjcObject]()
+        for (var i = 0; i < 1000000; i++) {
+            objcObjects.append(ObjcObject())
+        }
+        
+        self.measureBlock() {
+            SwiftUtils.shuffleObjcObjects(&objcObjects)
+        }
+    }
+    
     // MARK: Iterate 1,000,000 objects with [Int] array
     func testIterateObjectsObjC() {
         self.measureBlock() { [weak self] in

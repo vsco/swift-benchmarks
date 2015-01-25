@@ -65,6 +65,17 @@ class SwiftUtils: NSObject {
         }
     }
     
+    class func shuffleObjcObjects(inout array:[ObjcObject]) {
+        for (var i = 0; i < array.count; i++) {
+            let currentObject: ObjcObject = array[i]
+            let randomIndex = Int(arc4random()) % array.count
+            let randomObject: ObjcObject = array[randomIndex]
+            
+            array[i] = randomObject;
+            array[randomIndex] = currentObject
+        }
+    }
+    
     @objc class func iterateEmptyLoop(array: NSMutableArray) {
         for (var i = 0; i < array.count; i++) {
             
