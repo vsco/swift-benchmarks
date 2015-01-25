@@ -6,4 +6,6 @@
 //  Copyright (c) 2015 VSCO. All rights reserved.
 //
 
-import Foundation
+class SwiftObject : NSObject {
+    
+}
