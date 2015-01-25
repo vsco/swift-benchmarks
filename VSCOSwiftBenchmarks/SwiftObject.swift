@@ -9,3 +9,7 @@
 class SwiftObject : NSObject {
     
 }
+
+struct SwiftStructObject {
+    
+}

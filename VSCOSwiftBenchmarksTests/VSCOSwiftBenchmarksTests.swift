@@ -148,6 +148,23 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
         }
     }
     
+    // MARK: Shuffle 1,000,000 SwiftStructObject objects in [SwiftStructObject] array
+    
+    func testShuffleSwiftStructObjectObjC() {
+        // Cannot add SwiftStructObject to NSMutableArray
+    }
+    
+    func testShuffleSwiftStructObjectSwift() {
+        var swiftObjects = [SwiftStructObject]()
+        for (var i = 0; i < 1000000; i++) {
+            swiftObjects.append(SwiftStructObject())
+        }
+        
+        self.measureBlock() {
+            SwiftUtils.shuffleSwiftStructObjects(&swiftObjects)
+        }
+    }
+    
     // MARK: Iterate 1,000,000 objects with [Int] array
     func testIterateObjectsObjC() {
         self.measureBlock() { [weak self] in
