@@ -1,8 +1,8 @@
-*Swift unit tests compiled at Fastest[-O] Optimization Level*
+Swift unit tests compiled at Fastest[-O] Optimization Level
 
-*Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast*
+Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast
 
-*All data was gathered running the iPhone 6 Simulator on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro*
+All data was gathered running the iPhone 6 Simulator on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro
 
 
 || ObjectiveCUtils| @objc SwiftUtils| SwiftUtils|
