@@ -2,7 +2,7 @@ Swift unit tests compiled at Fastest[-O] Optimization Level
 
 Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast
 
-iPhone 6
+###iPhone 6 Benchmarks
 
 || ObjectiveCUtils| @objc SwiftUtils| SwiftUtils|
 |---|---|---|---|
@@ -26,7 +26,7 @@ iPhone 6
 |Empty implementation no parameters| 0.000 seconds |-| 0.000 seconds|
 
 
-iPhone 6 Simulator on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro
+###iPhone 6 Simulator on a 2.8 GHz Intel Core i7 8GB RAM MacBook Pro
 
 || ObjectiveCUtils| @objc SwiftUtils| SwiftUtils|
 |---|---|---|---|
