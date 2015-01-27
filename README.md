@@ -22,7 +22,7 @@ Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofas
 |Shuffle 1,000,000 ObjcObject objects with Swift implementation taking [ObjcObject]| 0.816 seconds 3% STDEV |-| 2.529 seconds 1% STDEV|
 |Shuffle 1,000,000 SwiftObject objects with Swift implementation taking [SwiftObject]| 0.826 seconds 2% STDEV |-| 2.527 seconds 1% STDEV|
 |Shuffle 1,000,000 SwiftStructObject objects with Swift implementation taking [SwiftStructObject]|-|-| 0.070 seconds 1% STDEV|
-|Empty loop 1,000,000 String objects in [Int]| 0.010 seconds 38% STDEV |-| 0.003 seconds 49% STDEV|
+|Empty loop 1,000,000 Int objects in [Int]| 0.010 seconds 38% STDEV |-| 0.003 seconds 49% STDEV|
 |Empty implementation no parameters| 0.000 seconds |-| 0.000 seconds|
 
 
