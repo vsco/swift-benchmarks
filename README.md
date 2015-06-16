@@ -101,8 +101,3 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 1.1| 0.010 seconds 38% STDEV |-| 0.003 seconds 49% STDEV|
 |Swift 1.2| 0.005 seconds 10% STDEV |-| 0.001 seconds 20% STDEV|
 |Swift 2.0| 0.005 seconds 23% STDEV |-| 0.001 seconds 10% STDEV|
-
-|Version| ObjectiveCUtils| @objc SwiftUtils| SwiftUtils|
-|---|---|---|---|
-|**Swift Unit Test**|
-|Empty loop 1,000,000 Int objects in [Int]| 0.010 seconds 38% STDEV |-| 0.003 seconds 49% STDEV|
