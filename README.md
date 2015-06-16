@@ -1,4 +1,4 @@
-Swift unit tests compiled at Fastest[-O] Optimization Level
+Swift 1.1 unit tests compiled at Fastest[-O] Optimization Level
 
 Apple LLVM 6.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast
 

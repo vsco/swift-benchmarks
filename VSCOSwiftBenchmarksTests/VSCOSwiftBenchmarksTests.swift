@@ -193,7 +193,7 @@ class VSCOSwiftBenchmarksTests: XCTestCase {
     }
     
     func testIterateObjectsSwift() {
-        var intObjects = self.dynamicType.createSwiftArray() { index -> Int in
+        let intObjects = self.dynamicType.createSwiftArray() { index -> Int in
             return index
         }
         

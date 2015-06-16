@@ -204,6 +204,7 @@
 		4B7881461A6F11DD00DA59F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = VSCO;
 				TargetAttributes = {
