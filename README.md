@@ -1,8 +1,8 @@
 Swift Compiler optimization level for unit tests set to -O
 Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -Ofast
 
-###**Tests written in Objective-C**
-#####Shuffle 1,000,000 NSNumber objects in NSMutableArray
+### **Tests written in Objective-C**
+##### Shuffle 1,000,000 NSNumber objects in NSMutableArray
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.304 seconds 5% STDEV| 0.376 seconds 1% STDEV|-|iPhone 6 (8.3)|
@@ -11,7 +11,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.313 seconds 2% STDEV| 0.318 seconds 3% STDEV|-|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.259 seconds 3% STDEV| 0.261 seconds 2% STDEV|-|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 NSString objects in NSMutableArray
+##### Shuffle 1,000,000 NSString objects in NSMutableArray
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 1.091 seconds 2% STDEV| 1.290 seconds 3% STDEV|-|iPhone 6 (8.3)|
@@ -20,7 +20,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.307 seconds 2% STDEV| 0.312 seconds 2% STDEV|-|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.258 seconds 4% STDEV| 0.265 seconds 6% STDEV|-|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 ObjcObject objects in NSMutableArray
+##### Shuffle 1,000,000 ObjcObject objects in NSMutableArray
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.839 seconds 4% STDEV| 1.014 seconds 4% STDEV|-|iPhone 6 (8.3)|
@@ -29,7 +29,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.877 seconds 2% STDEV| 0.862 seconds 1% STDEV|-|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.775 seconds 4% STDEV| 0.780 seconds 4% STDEV|-|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 SwiftObject objects in NSMutableArray
+##### Shuffle 1,000,000 SwiftObject objects in NSMutableArray
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.818 seconds 1% STDEV| 1.015 seconds 1% STDEV|-|iPhone 6 (8.3)|
@@ -38,7 +38,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.861 seconds 3% STDEV| 0.853 seconds 3% STDEV|-|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.769 seconds 4% STDEV| 0.779 seconds 6% STDEV|-|iPhone 6 (9.2)|
 
-#####Empty loop 1,000,000 objects with NSMutableArray
+##### Empty loop 1,000,000 objects with NSMutableArray
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.006 seconds 2% STDEV| 0.005 seconds 9% STDEV|-|iPhone 6 (8.3)|
@@ -47,8 +47,8 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.005 seconds 8% STDEV| 0.005 seconds 11% STDEV|-|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.006 seconds 36% STDEV| 0.005 seconds 2% STDEV|-|iPhone 6 (9.2)|
 
-###**Tests written in Swift**
-#####Shuffle 1,000,000 Int objects with Swift implementation taking [AnyObject]
+### **Tests written in Swift**
+##### Shuffle 1,000,000 Int objects with Swift implementation taking [AnyObject]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.296 seconds 1% STDEV|-| 1.616 seconds 2% STDEV|iPhone 6 (8.3)|
@@ -57,7 +57,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.305 seconds 1% STDEV|-| 0.336 seconds 5% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.256 seconds 1% STDEV|-| 0.284 seconds 7% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 Int objects with Swift implementation taking [Any]
+##### Shuffle 1,000,000 Int objects with Swift implementation taking [Any]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| Same as above |-| 0.537 seconds 3% STDEV|iPhone 6 (8.3)|
@@ -66,7 +66,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| Same as above |-| 0.378 seconds 6% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| Same as above |-| 0.340 seconds 3% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 Int objects with Swift implementation taking [Int]
+##### Shuffle 1,000,000 Int objects with Swift implementation taking [Int]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| Same as above |-| 0.181 seconds 2% STDEV|iPhone 6 (8.3)|
@@ -75,7 +75,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| Same as above |-| 0.240 seconds 2% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| Same as above |-| 0.198 seconds 6% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 Int objects with Swift implementation taking [T]
+##### Shuffle 1,000,000 Int objects with Swift implementation taking [T]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| Same as above |-| 32.627 seconds 1% STDEV|iPhone 6 (8.3)|
@@ -84,7 +84,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| Same as above |-| 2.025 seconds 1% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| Same as above |-| 2.185 seconds 2% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 String objects with Swift implementation taking [String]
+##### Shuffle 1,000,000 String objects with Swift implementation taking [String]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 1.137 seconds 2% STDEV |-| 0.829 seconds 2% STDEV|iPhone 6 (8.3)|
@@ -93,7 +93,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 1.253 seconds 3% STDEV |-| 1.010 seconds 3% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 1.138 seconds 2% STDEV |-| 0.878 seconds 2% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 ObjcObject objects with Swift implementation taking [ObjcObject]
+##### Shuffle 1,000,000 ObjcObject objects with Swift implementation taking [ObjcObject]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.816 seconds 3% STDEV |-| 2.529 seconds 1% STDEV|iPhone 6 (8.3)|
@@ -102,7 +102,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.827 seconds 4% STDEV |-| 0.895 seconds 2% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.748 seconds 4% STDEV |-| 0.810 seconds 1% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 SwiftObject objects with Swift implementation taking [SwiftObject]
+##### Shuffle 1,000,000 SwiftObject objects with Swift implementation taking [SwiftObject]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.826 seconds 2% STDEV |-| 2.527 seconds 1% STDEV|iPhone 6 (8.3)|
@@ -111,7 +111,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| 0.835 seconds 4% STDEV |-| 0.887 seconds 3% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| 0.755 seconds 3% STDEV |-| 0.809 seconds 3% STDEV|iPhone 6 (9.2)|
 
-#####Shuffle 1,000,000 SwiftStructObject objects with Swift implementation taking [SwiftStructObject]
+##### Shuffle 1,000,000 SwiftStructObject objects with Swift implementation taking [SwiftStructObject]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| -|-| 0.070 seconds 1% STDEV|iPhone 6 (8.3)|
@@ -120,7 +120,7 @@ Apple LLVM 6.0/7.0 Optimization Level set to Fastest, Aggressive Optimizations -
 |Swift 2.1| -|-| 0.067 seconds 5% STDEV|iPhone 6 (9.2)|
 |[Swift 2.2 Snapshot](https://swift.org/builds/xcode/swift-2.2-SNAPSHOT-2015-12-01-a/swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg)| -|-| 0.069 seconds 17% STDEV|iPhone 6 (9.2)|
 
-#####Empty loop 1,000,000 Int objects in [Int]
+##### Empty loop 1,000,000 Int objects in [Int]
 |Version|Objective-C|Bridgeable Swift|Swift|Device (iOS Version)|
 |---|---|---|---|---|
 |Swift 1.1| 0.010 seconds 38% STDEV |-| 0.003 seconds 49% STDEV|iPhone 6 (8.3)|
